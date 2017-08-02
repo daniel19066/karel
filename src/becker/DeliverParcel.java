@@ -8,20 +8,44 @@ public class DeliverParcel
    {  
      // Set up the initial situation
       City prague = new City();
-      Thing parcel = new Thing(prague, 1, 2);
-      Robot karel = new Robot(prague, 1, 0, Direction.EAST,5);
+      /*for(int i=1;i<3;i++){
+          new Wall(prague,1,i,Direction.NORTH);
+          new Wall(prague,2,i,Direction.SOUTH);
+          new Wall(prague,i,1,Direction.WEST);
+          new Wall(prague,i,2,Direction.EAST);
+      };*/
+//      for(int i=1;i<3;i++){
+//          new Wall(prague,1,i,Direction.NORTH);
+//          new Wall(prague,i,1,Direction.WEST);
+//          new Wall(prague,3-i,i,Direction.SOUTH);
+//          if(i==2){
+//              new Wall(prague,1,i,Direction.EAST);
+//          }
+//      }
+//      new Thing(prague,2,2);
+      Robot karel = new Robot(prague, 1, 2, Direction.SOUTH,5);
     
-      // Direct the robot to the final situation
+      // Direct the robot to the final situation}
+      /*karel.move();
       karel.move();
-      karel.move();
-      karel.pickThing();
-      karel.move();
-      karel.turnLeft();	// start turning right as three turn lefts
       karel.turnLeft();
-      karel.turnLeft();	// finished turning right
+      for(int i=0;i<3;i++){
       karel.move();
-     // karel.putThing();
       karel.move();
+      karel.move();
+      karel.turnLeft(); 
+      }
+      karel.move();*/
+//      for(int i=0;i<3;i++){
+//          if(i==0){
+//              karel.turnLeft();
+//              karel.turnLeft();
+//          }
+//          karel.turnLeft();
+//          karel.move();
+//      }
+//     karel.pickThing();
+      
       System.out.println(karel.countThingsInBackpack());
    }
 }
